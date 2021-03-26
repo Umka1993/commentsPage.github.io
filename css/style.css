@@ -1,94 +1,134 @@
 @charset "UTF-8";
 .section {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid Gainsboro;
   border-radius: 3px;
   padding: 10px 20px;
   font-weight: bold;
-  font-size: 15px; }
-  .section__form {
-    max-width: 100%; }
-  .section__label {
-    margin-left: 30px; }
+  font-size: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section__form {
+  max-width: 100%;
+}
+
+.section__label {
+  margin-left: 30px;
+}
 
 select {
   padding: 5px;
   border-radius: 2px;
-  margin-left: 10px; }
+  margin-left: 10px;
+}
 
 .evaluation {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  justify-content: space-between;
-  width: 220px; }
-  .evaluation__value {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    color: green;
-    font-size: 18px; }
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 220px;
+}
+
+.evaluation__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: green;
+  font-size: 18px;
+}
 
 .coments {
   margin-top: 50px;
   font-size: 15px;
   max-width: 1250px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 .foto {
-  padding-right: 20px; }
-  .foto img {
-    border-radius: 50%; }
+  padding-right: 20px;
+}
+
+.foto img {
+  border-radius: 50%;
+}
 
 .coment {
   display: -webkit-box;
-  display: flex; }
-  .coment__user p {
-    display: inline-block;
-    padding: 20px;
-    background-color: PaleTurquoise;
-    border-radius: 3px; }
-  .coment__company p {
-    background-color: silver;
-    display: inline-block;
-    padding: 20px;
-    border-radius: 3px; }
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coment__user p {
+  display: inline-block;
+  padding: 20px;
+  background-color: PaleTurquoise;
+  border-radius: 3px;
+}
+
+.coment__company p {
+  background-color: silver;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 3px;
+}
 
 .bad p {
-  background-color: LightSalmon; }
+  background-color: LightSalmon;
+}
 
 .row {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-between; }
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 
 .data {
-  display: block; }
-  .data__name {
-    color: Blue; }
-  .data__time {
-    color: silver;
-    margin-left: 10px; }
+  display: block;
+}
+
+.data__name {
+  color: Blue;
+}
+
+.data__time {
+  color: silver;
+  margin-left: 10px;
+}
 
 .company {
   width: 80%;
   margin-left: auto;
   margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 /* скрываем чекбоксы и блоки с содержанием */
 .hide, .hide + label ~ div {
-  display: none; }
+  display: none;
+}
 
 /* вид текста label */
 .hide + label,
@@ -99,7 +139,8 @@ select {
   margin-left: 85px;
   padding: 10px 20px;
   background-color: green;
-  border-radius: 15px; }
+  border-radius: 15px;
+}
 
 /* вид текста label при активном переключателе */
 .hide:checked + label {
@@ -108,56 +149,149 @@ select {
   padding: 10px 20px;
   background-color: white;
   border-radius: 15px;
-  border: 1px solid green; }
+  border: 1px solid green;
+}
 
 /* когда чекбокс активен показываем блоки с содержанием  */
 .hide:checked + label + div {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  margin-top: 15px; }
+  margin-top: 15px;
+}
 
 .review {
   margin-top: 20px;
-  margin-bottom: 50px; }
-  .review__user {
-    font-weight: bold;
-    font-size: 25px; }
-  .review__note {
+  margin-bottom: 50px;
+}
+
+.review__user {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.review__note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  width: 220px;
+  color: grey;
+}
+
+.review__note img {
+  border: 1px solid silver;
+  border-radius: 1px;
+  padding: 8px;
+}
+
+.review__form {
+  padding-bottom: 50px;
+}
+
+.review__form textarea {
+  resize: none;
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  border-radius: 3px;
+}
+
+.review__submit {
+  margin-top: 20px;
+  float: right;
+  color: white;
+  padding: 15px 30px;
+  background-color: RoyalBlue;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .section__form label {
+    width: 100%;
+    margin: 0;
+  }
+  .section__label {
+    margin-left: 5px;
+  }
+  .evaluation {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .section__form {
     display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    margin-top: 20px;
-    width: 220px;
-    color: grey; }
-    .review__note img {
-      border: 1px solid silver;
-      border-radius: 1px;
-      padding: 8px; }
-  .review__form {
-    padding-bottom: 50px; }
-    .review__form textarea {
-      resize: none;
-      margin-top: 20px;
-      width: 100%;
-      height: 200px;
-      border-radius: 3px; }
-  .review__submit {
-    margin-top: 20px;
-    float: right;
-    color: white;
-    padding: 15px 30px;
-    background-color: RoyalBlue;
-    border: none;
-    border-radius: 3px;
-    font-size: 16px; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin: 5px auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .section__form label {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.evaluation {
+  width: 200px;
+}
 
 * {
-  box-sizing: border-box;
-  font-family: sans-serif; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
 
 .container {
   max-width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */
